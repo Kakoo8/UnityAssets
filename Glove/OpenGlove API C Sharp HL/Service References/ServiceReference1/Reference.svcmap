@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="045d9b2e-5bb8-4b0a-a34d-da4224eba58b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/OpenGloveWCF/OGService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="1c368e66-4d89-4241-b701-48896820c3ec" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/OpenGloveWCF/OGService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="111566ed-0d5a-4b69-b501-a43914ff2ebf" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/OpenGloveWCF/OGService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="0787d7e8-c31d-4336-a882-4f23cb5185e1" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/OpenGloveWCF/OGService/mex" />
+    <MetadataFile FileName="OpenGloveWCF.xsd" MetadataType="Schema" ID="49cf520e-7140-43a5-81cb-a1ebcf12b3fd" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/OpenGloveWCF/OGService/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="16875ba5-58b4-40a5-9c73-309d8e46a1c6" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/OpenGloveWCF/OGService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
