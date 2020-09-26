@@ -4,56 +4,72 @@ using OpenGlove_API_C_Sharp_HL;
 using OpenGlove_API_C_Sharp_HL.ServiceReference1;
 using System;
 using UnityEngine;
+using UnityEditor;
+using System.Linq;
 
+[Serializable]
 public class OpenGloveScript : MonoBehaviour
 {
     public OpenGlove_API_C_Sharp_HL.OpenGloveAPI api;
     public Glove glove;
-    //public Transform theDest;
-    //List<int> regions = new List<int>() { 3,0,2,1,25};
-    // List<int> intensity = new List<int>() { 255, 255, 255, 255,255};
-    //List<int> intensityOff = new List<int>() { 0, 0, 0, 0 };
-    [Header("Guantes")]
-    public  List<Glove> gloves;
-   
+    [Header("Guantes Conectados")]
+    
+    public int connectedGloves;
+
+
+
 
     [Header("Regiones en el guante")]
-    public List<int> regions = new List<int>() ;
+    public List<String> regionstoshow = new List<String>();
+    static public List<String> regions = new List<String>() ;
 
-
-    
-
+        
+    [HideInInspector]
+    public String region;
+    [HideInInspector]
+    public  List<Glove> gloves;
+    [HideInInspector]
+    public int selected;
 
 
     public void Awake()
     {
-        region = 0;
-    }
-    public void Start()
-    {
-          api  = OpenGloveAPI.GetInstance();
+        
+
+        api = OpenGloveAPI.GetInstance();
         try
         {
-            
+
             gloves = api.Devices;
-            glove = gloves[1];
-            
+
             Debug.Log(gloves);
         }
         catch
         {
             Debug.Log("ERROR: El servicio no esta activo");
         }
-        
-     }
+ 
+    }
+
+    public void Start()
+    {
+
+        glove = gloves[selected];
+        connectedGloves = gloves.Count;
+        regions = glove.GloveConfiguration.GloveProfile.Mappings.Keys.ToList();
+        regionstoshow = regions;
+    }
 
     public void Update()
     {
         
     }
 
-
-
+    public void AgregarRegion(String region)
+    {
+        regions.Add(region);
+    }
+        
 
     public enum PalmarRegion
     {
