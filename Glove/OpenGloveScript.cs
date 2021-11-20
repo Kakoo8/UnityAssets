@@ -12,14 +12,14 @@ public class OpenGloveScript : MonoBehaviour
 {
     public OpenGlove_API_C_Sharp_HL.OpenGloveAPI api;
     public Glove glove;
-    [Header("Guantes Conectados")]
+    [Header("")]
     
     public int connectedGloves;
 
 
 
 
-    [Header("Regiones en el guante")]
+    [Header("")]
     public List<String> regionstoshow = new List<String>();
     static public List<String> regions = new List<String>() ;
 

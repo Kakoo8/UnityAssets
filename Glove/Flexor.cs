@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class Flexor : MonoBehaviour
 {
-    [Header("Valor Threshold")]
-    public int valor;
-    [Header("Valor Threshold")]
-    public int flexor;
-    [Header("Valor Threshold")]
-    public int valorFlexor;
     public OpenGloveScript UGlove;
+    
+    [HideInInspector]
+    public int flexor;
+    [HideInInspector]
+    public int selected;
+    [Header("")]
+    public int flexorValue;
+    [Header("")]
+    public int threshold;
+
 
 
     // Start is called before the first frame update
@@ -28,16 +32,16 @@ public class Flexor : MonoBehaviour
     private void Flexor_fingersFunction(int region, int value)
     {
         flexor = region;
-        valorFlexor = value;
+        flexorValue = value;
     }
 
-    void calibrarFlexores()
+    public void calibrateFlexors()
     {
         UGlove.api.calibrateFlexors(UGlove.glove);
     } 
 
-    void definirThreshold(int valor)
+    public void setThreshold(int value)
     {
-        UGlove.api.setThreshold(UGlove.glove,valor);
+        UGlove.api.setThreshold(UGlove.glove,value);
     }
 }

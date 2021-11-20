@@ -6,10 +6,10 @@ using System;
 using System.Linq;
 
 
-[CustomEditor(typeof(VibeBoard))]
-public class VibeBoardEditor : Editor
-{
-    string[] regions ={"FingerSmallDistal",
+[CustomEditor(typeof(VibeByClick))]
+public class VibeByClickEditor : Editor
+{       
+    string[]regions ={"FingerSmallDistal",
         "FingerRingDistal",
         "FingerMiddleDistal",
         "FingerIndexDistal",
@@ -50,7 +50,7 @@ public class VibeBoardEditor : Editor
         {
         base.OnInspectorGUI();
         
-        VibeBoard objetivo = (VibeBoard)target;
+        VibeByClick objetivo = (VibeByClick)target;
         int[] opt = OpenGloveScript.regions.Select(s => Convert.ToInt32(s)).ToList().ToArray();
         string[] options = Array.ConvertAll(opt, ele => regions[ele]);
        

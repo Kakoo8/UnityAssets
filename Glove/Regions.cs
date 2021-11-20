@@ -17,15 +17,10 @@ public class Regions : Editor
          
          string[] options = new string[]
          {
-             "Guante 1", "Guante 2", "Guante 3", 
+             "Glove 1", "Glove 2", "Glove 3", 
          };
         objetivo.selected= EditorGUILayout.Popup("Select Glove", objetivo.selected, options); 
-        if (GUILayout.Button("Add Region"))
-        {
-            objetivo.AgregarRegion(objetivo.region);
-            Debug.Log("Region Agregada");
-           
-        }
+
 
 
 

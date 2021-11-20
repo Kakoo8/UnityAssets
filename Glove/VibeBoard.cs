@@ -8,11 +8,11 @@ public class VibeBoard : MonoBehaviour
 {
 
 
-    [Header("Intensidad en las regiones")]
+    [Header("")]
     [Range(0, 255)]
     public int intensity;
 
-    private List<int> intensityOff = new List<int>() ;
+    
     public OpenGloveScript UGlove;
     
 
